@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo Chat Room</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="initialView">
+        <h1>Bem-vindo ao Bingo Chat Room</h1>
+        <input type="text" id="nameInput" placeholder="Seu nome">
+        <button id="createRoomBtn">Criar Sala</button>
+        <button id="showJoinRoomBtn">Entrar em uma Sala</button>
+        <div id="joinRoomDiv" class="hidden">
+            <input type="text" id="roomIdInput" placeholder="ID da sala">
+            <button id="joinRoomBtn">Entrar</button>
+        </div>
+        <div id="roomStatus"></div>
+    </div>
+
+    <div id="roomDiv" class="hidden">
+        <h2>Sala de Chat</h2>
+        <div>
+            <button id="leaveRoomBtn">Sair da Sala</button>
+        </div>
+        <div>
+            <h3>ID da Sala: <span id="currentRoomId"></span></h3>
+        </div>
+        <div>
+            <input type="text" id="messageInput" placeholder="Digite sua mensagem">
+            <button id="sendMessageBtn">Enviar</button>
+        </div>
+        <div id="messages"></div>
+        <div>
+            <button id="openBingoCardBtn">Abrir Cartela de Bingo</button>
+            <button id="drawNumberBtn" class="creator-only">Sortear Número</button>
+            <button id="checkBingoCardBtn" class="creator-only">Verificar Cartela</button>
+        </div>
+        <div id="bingoDiv" class="hidden">
+            <h3>ID da Cartela: <span id="bingoCardId"></span></h3>
+            <div id="bingoCard" class="bingo-card"></div>
+            <div id="drawnNumbers"></div>
+        </div>
+        <div id="sidebar">
+            <h3>Participantes</h3>
+            <ul id="participantsList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
